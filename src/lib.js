@@ -142,6 +142,7 @@ var curlConverter = {
             var thisElem = dataArray[i];
             if(dataArray[i]==="") continue;
 
+            console.log(thisElem,'here')
             thisElem = this.trimQuotesFromString(thisElem);
 
             var equalIndex = thisElem.indexOf("=");
@@ -304,7 +305,7 @@ var curlConverter = {
 
             	}
                 else {
-                	var dataString = this.convertArrayToAmpersandString(curlObj.data);
+                    var dataString = this.convertArrayToAmpersandString(curlObj.data);
                 	var dataAsciiString = this.convertArrayToAmpersandString(curlObj.dataAscii);
                     var str1 = this.trimQuotesFromString(dataString),
                         str2 = this.trimQuotesFromString(dataAsciiString);
